@@ -1,0 +1,28 @@
+spring:
+  datasource:  
+    name: mydb  
+    type: com.alibaba.druid.pool.DruidDataSource  
+    url: jdbc:mysql://a.xbazhen.com:16182/sssunday-bak?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
+    username: root  
+    password: 142857  
+    driver-class-name: com.mysql.jdbc.Driver  
+    minIdle: 1  
+    maxActive: 2  
+    initialSize: 1  
+    timeBetweenEvictionRunsMillis: 3000  
+    minEvictableIdleTimeMillis: 300000  
+    validationQuery: SELECT 'ZTM' FROM DUAL  
+    testWhileIdle: true  
+    testOnBorrow: false  
+    testOnReturn: false 
+  rabbitmq:
+    host: 192.168.20.101
+    port: 5673
+    username: chenlin
+    password: chenlin
+    virtual-host: chenlin
+    
+mybatis:   
+  mapperLocations: classpath*:mapper/*.xml
+  
+from: from-dev-domainA-projectB-new
